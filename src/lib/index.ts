@@ -33,6 +33,7 @@ export {
 	removeFiles,
 	fail,
 	type SuperValidated,
+	type SuperValidateOptions,
 	type TaintedFields,
 	type ValidationErrors,
 	type Infer,
@@ -59,4 +60,5 @@ export {
 
 export { splitPath } from './stringPath.js';
 
-export type { ErrorStatus } from './utils.js';
+export type { ErrorStatus, MergeUnion, MergeFormUnion } from './utils.js';
+export { mergeFormUnion } from './utils.js';

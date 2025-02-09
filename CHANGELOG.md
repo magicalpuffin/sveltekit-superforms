@@ -5,6 +5,38 @@ Headlines: Added, Changed, Deprecated, Removed, Fixed, Security
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Exported `SuperValidateOptions` type.
+- Exported `MergeUnion`, `MergeFormUnion` and a `mergeFormUnion` utility, for handling discriminated unions in forms.
+
+## [2.23.1] - 2025-01-21
+
+### Removed
+
+- Rolled back runes option for SuperDebug, it wasn't compatible with Svelte 4.
+
+## [2.23.0] - 2025-01-21
+
+### Added
+
+- `dateProxy` now has a `step` option, to support seconds (when [not divisible by 60](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time#using_the_step_attribute)).
+- [SuperDebug](https://superforms.rocks/super-debug) now opts out of runes mode as default.
+
+### Fixed
+
+- Fixed `dateProxy` for `time` formats, previously it returned an invalid date. If you only care about the time part in the date, use `time-utc` as format to avoid timezone changes.
+- Vite 6 bundling fixed by introducing a `default` field into exports in package.json.
+
+### Changed
+
+- [Arktype 2.0](https://arktype.io/) is finally released! Adapter updated, please check it out, it's validation on the next level.
+- Arktype is now displaying errors with `problem` instead of `message`, for nicer output.
+- Zod peerDependency updated to 3.24.1 to be compatible with its latest fix.
+- VineJS adapter updated to 3.0.0.
+
 ## [2.22.1] - 2024-12-16
 
 ### Fixed

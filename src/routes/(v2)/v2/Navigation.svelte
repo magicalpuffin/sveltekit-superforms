@@ -76,7 +76,9 @@
     'typeboxNoCompile',
 		'transport',
 		'bigint',
-		'issue-455'
+		'issue-455',
+		'vine',
+		'timeproxy'
 	].sort();
 </script>
 
